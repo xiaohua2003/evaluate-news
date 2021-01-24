@@ -7,13 +7,11 @@ function handleSubmit(event) {
 
     console.log("::: Form Submitted :::")
     postData('http://localhost:8081/api', {name: formText})
-    
-    .then(res => res.json())
     .then(function(res) {
         document.getElementById('results').innerHTML = res.message
     }) 
 }
-    const postData = async (url="", data{}) => {
+    const postData = async (url="", data={}) => {
         console.log(data);
         const response = await fetch(url, {
             method: 'POST',

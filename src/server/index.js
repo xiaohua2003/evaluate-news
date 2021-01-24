@@ -5,7 +5,7 @@ const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 const app = express()
 const fetch = require('node-fetch');
-const URL='https://api.meaningcloud.com/sentiment-2.1'
+const URL='https://api.meaningcloud.com/sentiment-2.1?'
 
 //Here we are configuring express to use body-parser as middle-ware.
 const bodyParser=require("body-parser");
