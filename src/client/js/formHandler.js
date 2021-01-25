@@ -8,7 +8,10 @@ function handleSubmit(event) {
     console.log("::: Form Submitted :::")
     postData('http://localhost:8081/api', {name: formText})
     .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
+        document.getElementById('results').innerHTML = `Confidence:${res.confidence}<br>
+        Score tag: ${res.score_tag}<br>
+        Subjectivity:${res.subjectivity}<br>
+        Irony:${res.irony}`
     }) 
 }
     const postData = async (url="", data={}) => {
